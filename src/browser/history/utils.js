@@ -2,7 +2,6 @@
 
 const _ = require("lodash");
 
-const MAX_STRING_LENGTH = 50;
 
 exports.normalizeCommandArgs = (name, args = []) => {
     if (name === "execute") {
@@ -11,7 +10,7 @@ exports.normalizeCommandArgs = (name, args = []) => {
 
     return args.map(arg => {
         if (_.isString(arg)) {
-            return _.truncate(arg, { length: MAX_STRING_LENGTH });
+            return _.truncate(arg, { length: this._config.historyMaxStringLength });
         }
 
         if (_.isPlainObject(arg)) {

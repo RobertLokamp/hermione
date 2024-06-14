@@ -110,6 +110,7 @@ export interface CommonConfig {
     testTimeout: number | null;
     waitTimeout: number;
     saveHistoryMode: "all" | "none" | "onlyFailed";
+    historyMaxStringLength: number;
     takeScreenshotOnFails: {
         testFail: boolean;
         assertViewFail: boolean;

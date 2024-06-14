@@ -81,6 +81,7 @@ module.exports = {
     resetCursor: true,
     strictTestsOrder: false,
     saveHistoryMode: SAVE_HISTORY_MODE.ALL,
+    historyMaxStringLength: 50,
     fileExtensions: [".js", ".mjs", ".ts", ".mts", ".jsx", ".tsx"],
     outputDir: null,
     agent: null,
